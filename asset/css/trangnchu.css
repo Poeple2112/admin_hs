@@ -1,64 +1,190 @@
-
 body {
   width: 100vw;
   height: 100vh;
-  font-family: "Roboto","Arial";
+  font-family: "Roboto", "Arial";
 }
 .container {
   width: 100%;
   height: 100%;
+  display: flex;
 }
 .top {
-  height: fit-content;
+  box-sizing: border-box;
+  height: 50px;
   width: 100%;
   margin: 0 auto;
   background-color: rgb(27, 27, 169);
   display: flex;
+  align-items: center;
   position: sticky;
 }
-.top span {
+.top a {
   padding: 9px 30px 11px;
   color: azure;
   font-weight: 700;
   margin-left: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 
+.left_side {
+  box-sizing: border-box;
+  position: fixed;
+  box-shadow: 0px 0px 100px 7px rgba(9, 9, 79, 0.5);
+  height: 100%;
+  width: 203.4px;
+  z-index: 2;
+  background: rgb(9, 9, 79);
+  border-radius: 0px 10px 0px 0px;
+  transition:  1s ease;
+}
+.left_side p {
+  box-sizing: content-box;
+  max-width: 203.04px;
+
+  padding: 10px 100px 10px 60px;
+  font-size: larger;
+  color: beige;
+  font-weight: 500;
+  text-decoration: overline;
+  text-decoration-color: grey;
+  line-height: 40px;
+  transition: 0.25s linear;
+}
+
+.top a:hover {
+  box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.left_side p:hover {
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+  color: rgb(220, 20, 60);
+  text-decoration-color: yellow;
+  text-decoration-thickness: 4px;
+  text-decoration-style: dashed;
+  background-color: rgba(9, 9, 79, 0.5);
+  transition: 0.75 ease-in;
+}
 h1{
-    position: absolute;
-    right: 10%;
-    font-size: larger;
-    color: aliceblue;
+  font-size: 50px ;
+  margin-left: 700px;
+  color: transparent;
+  background-image: linear-gradient(to left,red ,yellow , orange );
+  background-size: 100%;
+  background-clip: text;
+  
+  user-select: none;
+  pointer-events: none;
+  
 }
-.left_side{
-    box-sizing:border-box ;
-    box-shadow: 0px 0px 100px 7px rgba(9, 9, 79,0.5);
-    height: 100%;
-    width: 230px;
+h2 {
+  position: absolute;
+  z-index: 5;
+  padding-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 60px;
+  font-size: x-large;
+  color: grey;
+  display: inline-block;
+  transition: 1 ease;
+}
+.box {
+  box-sizing: border-box;
+  position: relative;
+  width: 180px;
+  height: 225px;
+  border: 2px solid rgb(19, 19, 136);
+  border-radius: 15px;
+}
+.box img {
+  width: 60%;
+  border: blue;
+}
+.box p {
+  text-align: left;
+  font-size: medium;
+  font-weight: bold;
 
-    background: rgb(9, 9, 79);
-    
+  color: crimson;
+}
+.box button {
+  width: 110px;
+  height: 40px;
+  margin: 10px 15px 10px;
+  border: 3px solid blue;
+  color: whitesmoke;
+  background-color: grey;
+  border-radius: 10px;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  top: -1%;
+  left: -1%;
+  right: -1%;
+  bottom: -1%;
+  border: 3px solid rgb(0, 0, 122);
+  border-radius: 15px;
+  filter: blur(7px);
+}
+
+.right_side {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
 }
-.left_side span {
-    max-width: 203.04px;
-    box-sizing: border-box;
-    padding: 10px 100px 10px 60px;
-    font-size: larger;
-    color: beige;
-    font-weight: 500;
-    text-decoration: wavy;
-    line-height: 40px;
-    transition: 0.75s linear;
+.mbutton {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  right: 8%;
+  top: 8%;
 }
-.left_side span:hover{
-    border: 0.5px solid rgba(0, 0, 0,0.5);
-    color: rgb(220, 20, 60);
-    background-color:rgba(9, 9, 79,0.5);
+.setting_btn {
+  position: relative;
+
+  width: 100px;
+  height: 45px;
+  background-color: rgba(4, 0, 0, 0.901);
+  color: aliceblue;
+  font-weight: 650;
+  border: none;
+  outline: none;
+  border-radius: 2px;
 }
-h2{
-    margin-left: 15px;
-    margin-bottom: 60px;
-    font-size: x-large;
-    color:blanchedalmond;
+@keyframes rotateborder {
+  0%,
+  40%,
+  80%,
+  100% {
+    transform: scaleX(1) scaleY(1) rotate(0deg) rotateZ(0deg);
+  }
+  20%,
+  60%,
+  100% {
+    transform: scaleX(2) scaleY(0.5) rotate(90deg) rotateZ(90deg);
+  }
+  30%,
+  70% {
+    transform: scaleX(1) scaleY(1) rotate(180px) rotateZ(180deg);
+  }
+  50%,
+  90% {
+    transform: scaleX(2) scaleY(0.5) rotate(270deg) rotateZ(270deg);
+  }
+}
+.setting_btn::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  bottom: -10%;
+  left: -10%;
+  right: -10%;
+  border: 10px dashed rgba(0, 0, 0, 0.338);
+  filter: blur(5px);
+  /* animation: rotateborder 10s linear both infinite; */
 }

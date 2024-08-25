@@ -27,21 +27,39 @@
     <link rel="stylesheet" href="./asset/css/trangnchu.css" />
   </head>
   <body>
+    <div class="top">
+      <a href=""><span>111</span></a>
+      <a href=""><span>222</span></a>
+      <a href=""><span>333</span></a>
+      <a href=""><span>444</span></a>
+      <h1><i class="fa-brands fa-html5"></i></h1>
+    </div>
     <div class="container">
-      <div class="top">
       
-        <span>111</span><span>222</span><span>333</span><span>444</span>
-        <h1>Logo</h1>
-      </div>
+
+      <h2 onclick="bar()"><i class="fa-solid fa-bars" id="nav"></i></h2>
       <div class="left_side">
-        <h2>Navigation</h2>
         
-        <span>Dashboard</span><br>
-        <span>manager</span><br>
-        <span>setting</span>
+
+        <a><p style="margin-top: 60px;">Dashboard</p></a><br />
+        <a><p>manager</p></a><br />
+        <a><p>setting</p></a>
+        
       </div>
 
-      <div class="right_side"></div>
+      <div class="right_side">
+        <div class="box">
+          <img src="" alt="Notfound">
+          <p>Tên:</p>
+          <p>Sđt:</p>
+          <P>Loại:</P>
+          <p>Tình trạng</p>
+          <button>Điều chỉnh:</button>
+        </div>
+
+        <div class="mbutton" onclick="darkmode()"><button class="setting_btn" onclick="darkmode()"> <i class="fa-regular fa-moon"></i> Dark</button></div>
+        
+      </div>
     </div>
 
     <script src="./asset/js/main.js"></script>
