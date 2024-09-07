@@ -26,7 +26,6 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-
 .left_side {
   box-sizing: border-box;
   position: fixed;
@@ -36,7 +35,7 @@ body {
   z-index: 2;
   background: rgb(9, 9, 79);
   border-radius: 0px 10px 0px 0px;
-  transition:  1s ease;
+  transition: 1s ease;
 }
 .left_side p {
   box-sizing: content-box;
@@ -65,17 +64,16 @@ body {
   background-color: rgba(9, 9, 79, 0.5);
   transition: 0.75 ease-in;
 }
-h1{
-  font-size: 50px ;
+h1 {
+  font-size: 50px;
   margin-left: 700px;
   color: transparent;
-  background-image: linear-gradient(to left,red ,yellow , orange );
+  background-image: linear-gradient(to left, red, yellow, orange);
   background-size: 100%;
   background-clip: text;
-  
+
   user-select: none;
   pointer-events: none;
-  
 }
 h2 {
   position: absolute;
@@ -86,7 +84,7 @@ h2 {
   font-size: x-large;
   color: grey;
   display: inline-block;
-  transition: 1 ease;
+  transition: 1s ease;
 }
 .box {
   box-sizing: border-box;
@@ -135,7 +133,6 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-
 }
 .mbutton {
   width: fit-content;
@@ -144,9 +141,13 @@ h2 {
   right: 8%;
   top: 8%;
 }
+.setting_btn:hover {
+  transition: 0.25s linear;
+  transform: scale(1.1);
+}
 .setting_btn {
   position: relative;
-
+  transition: 0.25s linear;
   width: 100px;
   height: 45px;
   background-color: rgba(4, 0, 0, 0.901);
@@ -186,5 +187,8 @@ h2 {
   right: -10%;
   border: 10px dashed rgba(0, 0, 0, 0.338);
   filter: blur(5px);
-  /* animation: rotateborder 10s linear both infinite; */
+  animation: rotateborder 10s linear both infinite;
+}
+.logo{
+  transition: opacity 0.5s, transform 1.5s;
 }
