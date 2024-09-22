@@ -16,7 +16,7 @@ async function check(){
         }
     }
     if(check_admin){
-        window.location.href = "index.html"
+        window.location.href = "main.html"
     }
     let finding = user_list.find(item => item.username == username.value.trim())
     let ps = finding.password;

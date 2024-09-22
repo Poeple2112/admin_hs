@@ -56,3 +56,28 @@ function changeLogo() {
 
 // Gọi hàm thay đổi logo mỗi 2 giây
 setInterval(changeLogo, 2000); // Chuyển đổi mỗi 2 giây
+const box= document.querySelector(".right_side")
+const url_us ="https://jsa37-api-bca8a1a0f23b.herokuapp.com/api/tuanthanh/products"
+async function handleGetAPIUser(url) {
+  try {
+      const data = await fetch(url)
+      const res = await data.json()
+      for(i=0;i<res.length;i++){
+        box.innerHTML += `<div class="box">
+          <img src="${res[i].img}" alt="Notfound">
+          <p>Tên:${res[i].title}</p>
+          <p>Mô tả: ${res[i].des}</p>
+          <P>Loại:${res.userId}</P>
+          <p>Tình trạng ${res[i].isView}</p>
+          <button>Điều chỉnh:</button>
+        </div>`
+      }
+
+      console.log(res)
+  } catch (error) {
+      console.error(error)
+  } finally {
+      console.log("Đã hoàn thành")
+  }
+}
+handleGetAPIUser(url_us);
